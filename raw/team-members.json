@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "name": "Arun Kumar",
+      "mail": "Arun.Kumar@Company.com",
+      "phone": "+91-5565214756",
+      "location": "UK - Onsite"
+    },
+    {
+        "id": 2,
+        "name": "Komal Singh",
+        "mail": "Komal.Singh@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    },
+    {
+        "id": 3,
+        "name": "Deepak Lal",
+        "mail": "D.Lal@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    },
+    {
+        "id": 4,
+        "name": "Sonam S",
+        "mail": "Sonam.S@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    },
+    {
+        "id": 5,
+        "name": "Hima Laad",
+        "mail": "Hima.L@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    },
+    {
+        "id": 6,
+        "name": "Nitin Kumar",
+        "mail": "Nitin.Kumar@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    },
+    {
+        "id": 7,
+        "name": "Prosun D",
+        "mail": "Prosun.D@Company.com",
+        "phone": "+91-5565214756",
+        "location": "India - Offshore"
+    }
+]
+  
