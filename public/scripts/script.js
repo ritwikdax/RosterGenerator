@@ -14,10 +14,7 @@ var teamData;
 var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-var month = selectMonth.value;
-var year = date.getFullYear();
-var dayCount = new Date(year,month,0).getDate();
-var firstDay = new Date(year,month,1).getDay(); 
+
 
 
 const base = window.location.origin;
@@ -50,18 +47,9 @@ $(document).ready(function(){
     temp += `</table>`;
     teamMembers.innerHTML = temp;
     teamData = data;
-    genRosterSeq(teamData.length, dayCount);
-    console.log(data.length);
-    console.log(dayCount);
-    console.log(sequence);
     //renderRoster(dayCount,months[month],firstDay);
   })
 })
-
-
-
-
-
 
 function shuffle(array) {
   let currentIndex = array.length,  randomIndex;
@@ -81,12 +69,10 @@ function shuffle(array) {
   return array;
 }
 
-
 function genRosterSeq(memCount, daysCount){
 
   sequence = [];
   let maxCount = Math.floor(daysCount/memCount);
-  console.log(maxCount);
   let count=0;
   let n = maxCount*memCount;
   let temp=0;
@@ -102,18 +88,11 @@ function genRosterSeq(memCount, daysCount){
   //Fill for remaining days
   while(count<daysCount){
     sequence.push(Math.floor(Math.random()*memCount));
-    console.log("Extra");
     count++;
   }
 
   return sequence;
 }
-
-
-
-
-
-
 
 function renderRoster(daysCount, monthName, firstDay){
 
@@ -138,6 +117,9 @@ function renderRoster(daysCount, monthName, firstDay){
   
 }
 
+/*
+console.log(new Date(2023, 0,0).getDate())
+*/
 
 //Generate Roster
 function generate(){
@@ -148,13 +130,16 @@ function generate(){
     return;
   }
 
-  
-  month = selectMonth.value;
-  year = date.getFullYear();
-  dayCount = new Date(year,month,0).getDate();
-  firstDay = new Date(year,month,1).getDay(); 
-
-
+  let month = selectMonth.value;
+  let year = date.getFullYear();
+  let temp = month;
+  temp++;
+  let dayCount = new Date(year,temp,0).getDate();
+  let firstDay = new Date(year,month,1).getDay(); 
+  /*console.log(`Selected Month ${month}`);
+  console.log(`Selected Year ${year}`);
+  console.log(`Selected Day Count ${dayCount}`);
+  console.log(`Selected First Day ${firstDay}`);*/
 
   if(radio_random.checked){
     //Generate Random Roster
